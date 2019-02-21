@@ -1,23 +1,13 @@
 const { Router } = require('express');
 const axios = require('axios');
+const rateFetcher = require('../modules/rateFetcher');
+
 module.exports = (router = new Router()) => {
   router.get('/rates', async (req, res) => {
-    const { data: exchangeRateData } = await axios.get(
-      'http://www.mocky.io/v2/5c6ef935340000f139892fac'
-    );
+    const rates = await rateFetcher.getRates();
 
-    const {
-      base,
-      date,
-      rates,
-    } = exchangeRateData
-    return res.json({
-      base,
-      date,
-      rates: {
-        MXM: rates['MXN']
-      }
-    });
+    return res.json(rates);
   });
+
   return router;
 };
