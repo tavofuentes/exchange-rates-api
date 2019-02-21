@@ -1,0 +1,15 @@
+{
+  "name": "exchange-rates-api",
+  "version": "1.0.0",
+  "description": "Exchange rate API",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "Octavio Fuentes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.16.4"
+  }
+}
