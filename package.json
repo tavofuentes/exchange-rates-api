@@ -10,6 +10,12 @@
   "author": "Octavio Fuentes",
   "license": "ISC",
   "dependencies": {
+    "axios": "0.18.0",
     "express": "4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "moxios": "^0.4.0",
+    "supertest": "^3.4.2"
   }
 }
